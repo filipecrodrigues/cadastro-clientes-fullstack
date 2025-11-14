@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)/* para o banco incrementar o ID*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY)/* para o banco incrementar o ID de forma automatica*/
     private Integer id;
 
     @Column(nullable = false, length = 150)
@@ -24,7 +24,7 @@ public class Cliente {
     @Column(nullable = false, length = 11)
     private String cpf;
 
-    @Column
+    @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
     /*Getters e seters criados com o loobok*/
